@@ -37,6 +37,15 @@ If you manage to compile the sources, you will be left with a binary named
 `fcode` in the `src` directory.  Simply place it somewhere in your path, e.g.,
 in `/usr/local/bin` or `$HOME/bin`.
 
+On windows 
+make -f Makefile.Linux CC="gcc -include win_fix.h"
+
+
+Test 
+-----
+Test on windows version 
+../src/fcode.exe detokenize ffb.fcode | diff -w ffb.fth -
+
 
 Usage
 -----
